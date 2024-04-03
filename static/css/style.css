@@ -1,0 +1,165 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Background color */
+}
+
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff; /* Chatbot background color */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 350px; /* Increased width */
+    height: 600px; /* Increased height */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 9999;
+    display: none; /* Initially hidden */
+}
+
+.chatbot.minimized {
+    height: 40px;
+}
+
+.chatbot-header {
+    background-color: #724ae8; /* Header background color */
+    color: #ffffff; /* Header text color */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chatbot-header h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.chatbox {
+    height: calc(100% - 120px); /* Adjusted height */
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    border: none;
+    background-color: #724ae8; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.chat-input button:hover {
+    background-color: #5e3aba; /* Button background color on hover */
+}
+
+.toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #724ae8; /* Toggle button background color */
+    color: #ffffff; /* Toggle button text color */
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.toggle-btn .message-icon {
+    font-size: 24px; /* Adjust icon size as needed */
+}
+
+.toggle-btn:hover {
+    background-color: #5e3aba; /* Toggle button background color on hover */
+}
+
+.minimize-btn {
+    background-color: transparent;
+    color: #ffffff; /* White color for the "-" symbol */
+    border: none;
+    font-size: 20px;
+    padding: 2px 20px; /* Increased padding for wider spacing */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.minimize-btn:hover {
+    background-color: #5e3aba; /* Minimize button background color on hover */
+}
+
+/* Add styles for the error message */
+.error {
+    background-color: #87ceeb; /* Sky color for error message box */
+    color: #ff0000; /* Red color for error message text */
+}
+/* Add styles for the live icon */
+.live-icon {
+    color: rgb(2, 165, 2); /* Green color for the live icon */
+    font-size: 12px; /* Adjust the size of the icon */
+    margin-left: 5px; /* Add some spacing between the text and the icon */
+}
+/* Add styles for the message boxes */
+.message {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Add styles for user's outgoing messages */
+.outgoing {
+    background-color: #8a2be2; /* Violet color for user's outgoing messages */
+    color: #ffffff; /* White color for text */
+}
+
+/* Add styles for bot's incoming messages */
+.incoming {
+    background-color: #87ceeb; /* Sky color for bot's incoming messages */
+    color: #000000; /* Black color for text */
+}
+/* Add hover effect for outgoing messages */
+.outgoing:hover {
+    border: 1px solid #3498db; /* Blue border color on hover */
+}
+
+/* Add hover effect for incoming messages */
+.incoming:hover {
+    border: 1px solid #3498db; /* Blue border color on hover */
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .chatbot {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .chatbot {
+        width: 250px;
+    }
+}
